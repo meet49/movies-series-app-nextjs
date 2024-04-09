@@ -8,7 +8,7 @@ const Series = () => {
         const fetchdata = async () => {
             // let res = await fetch("http://localhost:3000/api")
             // let data = await res.json();
-            
+
             const data = db.entries
             const filterSeries = data.filter(item => item.releaseYear >= 2010 && item.programType === 'series')
             const sortAscending = filterSeries.sort((a, b) => a.title.localeCompare(b.title))
@@ -23,6 +23,9 @@ const Series = () => {
     console.log(entries)
 
 
+    const handle = (e) => {
+        e.target.src = "/p2.JPEG"
+    }
 
     return (
         <div>
@@ -31,7 +34,9 @@ const Series = () => {
                 {entries.map((item, index) => (
                     <div key={index} className="flex flex-col items-center border-4 justify-between">
                         <div>
-                            <img src={item.images["Poster Art"].url} alt={item.title} className="h-60 w-44" />
+
+                        <img src={item.images["Poster Art"].url} alt={item.title} onError={handle} className="h-60 w-44" />
+
                         </div>
                         <h3><b>Title:</b>{item.title}</h3>
                         <h3><b>Release:</b>{item.releaseYear}</h3>
