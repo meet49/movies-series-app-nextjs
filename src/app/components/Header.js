@@ -12,12 +12,12 @@ function Header() {
           </Link>
         </div>
         <div className="mr-8 flex gap-10 pr-6 text-white mt-5 flex-col sm:flex sm:flex-row">
-          <div>
+          <div className="p-2">
             <Link href="/">
               Log in
             </Link>
           </div>
-          <button className="bg-slate-900 h-8 w-44">
+          <button className="bg-slate-900 mb-3 p-2 w- flex items-center justify-center flex-wrap">
             Start your free trial
           </button>
         </div>
