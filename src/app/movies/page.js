@@ -6,6 +6,8 @@ const Movies = () => {
     const [entries, setEntries] = useState([])
     useEffect(() => {
         const fetchdata = async () => {
+            // let res = await fetch("http://localhost:3000/api")
+            // let data = await res.json();
             const data = db.entries
             const filterMovie = data.filter(item => item.releaseYear >= 2010 && item.programType === 'movie')
             const sortAscending  = filterMovie.sort((a, b) => a.title.localeCompare(b.title))

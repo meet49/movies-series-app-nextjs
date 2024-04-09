@@ -6,6 +6,9 @@ const Series = () => {
     const [entries, setEntries] = useState([])
     useEffect(() => {
         const fetchdata = async () => {
+            // let res = await fetch("http://localhost:3000/api")
+            // let data = await res.json();
+            
             const data = db.entries
             const filterSeries = data.filter(item => item.releaseYear >= 2010 && item.programType === 'series')
             const sortAscending = filterSeries.sort((a, b) => a.title.localeCompare(b.title))
