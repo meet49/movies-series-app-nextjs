@@ -32,10 +32,10 @@ const Series = () => {
             <div className="bg-gray-800 text-white text-3xl font-semibold p-5 pl-20 sm:pl-24 md:pl-28 lg:pl-32 ">Popular Series</div>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-7  justify-around gap-4 px-4 my-6 ">
                 {entries.map((item, index) => (
-                    <div key={index} className="flex flex-col items-center border-4 justify-between">
+                    <div key={index} className="flex flex-col items-center border-4 justify-between hover:shadow-2xl hover:shadow-black">
                         <div>
 
-                        <img src={item.images["Poster Art"].url} alt={item.title} onError={handle} className="h-60 w-44" />
+                        <img src={item.images["Poster Art"].url} alt={item.title} onError={handle} className="h-60 w-44  " />
 
                         </div>
                         <h3><b>Title:</b>{item.title}</h3>

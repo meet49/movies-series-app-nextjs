@@ -9,22 +9,22 @@ function Content() {
       <div className="flex gap-6 ml-20 flex-col sm:flex-row sm:ml-24 md:ml-28 md:flex-row lg:ml-32 lg:flex-row mt-8">
         <div>
           <Link href="/series">
-            <div className="bg-gray-900 h-52 w-40 text-center justify-center flex text-white text-4xl items-center" >
+            <div className="bg-gray-900 h-52 w-40 text-center justify-center flex text-white text-4xl items-center hover:font-semibold hover:shadow-2xl hover:shadow-black border-8 border-yellow-800" >
               SERIES
             </div>
           </Link>
 
-          <p>Popular Series</p>
+          <p className="text-lg font-medium">Popular Series</p>
         </div>
         <div>
           
           <Link href="/movies">
-            <div className="bg-gray-900 h-52 w-40 text-center justify-center flex text-white text-4xl items-center">
+            <div className="bg-gray-900 h-52 w-40 text-center justify-center flex text-white text-4xl items-center hover:font-semibold hover:shadow-2xl hover:shadow-black border-8 border-yellow-800">
               MOVIES
             </div>
             </Link>
 
-              <p>Popular Movies</p>
+              <p className="text-lg font-medium">Popular Movies</p>
             </div>
         </div>
       </div>
