@@ -1,12 +1,12 @@
 "use client"
 import React, { useState, useEffect } from 'react';
+import db from "@/app/sample.json"
 
 const Movies = () => {
     const [entries, setEntries] = useState([])
     useEffect(() => {
         const fetchdata = async () => {
-            let res = await fetch("http://localhost:3000/api")
-            let data = await res.json();
+            const data = db.entries
             const filterMovie = data.filter(item => item.releaseYear >= 2010 && item.programType === 'movie')
             const sortAscending  = filterMovie.sort((a, b) => a.title.localeCompare(b.title))
             const sortNumber = sortAscending.slice(0, 21)

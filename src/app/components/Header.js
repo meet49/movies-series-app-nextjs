@@ -17,7 +17,7 @@ function Header() {
               Log in
             </Link>
           </div>
-          <button className="bg-slate-900 h-7 w-48">
+          <button className="bg-slate-900 h-8 w-44">
             Start your free trial
           </button>
         </div>
